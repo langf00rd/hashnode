@@ -2,11 +2,11 @@
 
 If you're reading this, I assume you're familiar with UI component libraries such as Material UI, Ant Design, Semantic UI, Chakra UI, and others. These libraries provide components like Buttons, Popups, Labels. Spinners, Loaders, etc.
 
-Luckily, setting up a similar React UI component-based library is pretty simple, allowing you to create reusable components that can be imported and used in any React project. This article will walk you through the process of creating a React component library step by step.
+Luckily, setting up a similar React UI component library is pretty simple, allowing you to create reusable components that can be imported and used in any React project. This article will walk you through the process of creating your very own React component library step by step.
 
 ## Getting started
 
-Creating our folder structure may be difficult, so we will take the easy way out. We'll be using the CLI tool [create-react-library](https://www.npmjs.com/package/create-react-library).
+Creating our folder structure may be difficult, so we will take the easy way out by using the CLI tool [create-react-library](https://www.npmjs.com/package/create-react-library).
 
 This tool configures our project with Rollup, Babel, and Jest for bundling, transpiling, and testing. It also allows our project to support TypeScript, complex peer dependencies, and CSS modules.
 
@@ -20,7 +20,7 @@ Install `create-react-library` by running the following command from your termin
 npm install -g create-react-library 
 ```
 
-## Creating the folder structure
+## Creating our project
 
 Now that we've installed `create-react-library`, we can run the command below to create our project. For this tutorial, we'll name our project as `test-library`. You can change the name to whatever you want. 
 
@@ -43,7 +43,7 @@ You will be required to enter a:
 - Package Manager
 - Template
 
-When you open the newly created project in your text editor, you should see the same folder and file structure. If something doesn't seem right, repeat the preceding command.
+After the installation is done, open the newly created project in your text editor, you should have a similar folder and file structure as seen in the screenshot below. If something doesn't seem right, repeat the preceding command.
 
 ![project folder structure screenshot](https://res.cloudinary.com/follio/image/upload/v1660492811/escfkqzapfvjvnzerl59.png)
 
@@ -58,7 +58,7 @@ Our local development is divided into two separate parts:
 
 ### Running the example react app
 
-A basic react app that has already been linked to the library we're creating can be found in the example/ folder. Run the react app dev server by:
+A basic react app that has already been linked to the library we're creating can be found in the `example/` folder. Start the react app dev server by:
 
 ```
 cd example # change directory into the example/ folder
@@ -84,16 +84,16 @@ If you do, open the `package.json` file in the `example/` folder and change the 
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js --openssl-legacy-provider build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js --openssl-legacy-provider test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js --openssl-legacy-provider eject"
-  },
+  }
 ```
 
-When you go to `localhost:3000/` in your preferred browser, you should see this.
+When you navigate to `localhost:3000/` in your preferred browser, you should see this.
 
 ![react app](https://res.cloudinary.com/follio/image/upload/v1660494275/uqity9ghrcocaxgqlrny.png)
 
-### Running the main component code
+### Running the component’s code
 
-In the base directory, run this piece of code to watch for changes and compile the code from our `src/` folder in real-time
+In the base directory, run this to watch for changes and compile the code from our `src/` folder in real-time
 
 ```
 npm start # runs rollup with the watch flag
@@ -129,12 +129,11 @@ The styles for the component can be found in the `styles.module.css` file. From 
 
 ```
 
-Our component(s)' compiled code can be found in the dist folder. This is the folder that will be deployed to npm
+Our component(s)' compiled code can be found in the dist folder. This is the folder we’ll be deploying to npm.
 
 ![Dist folder screenshot](https://res.cloudinary.com/follio/image/upload/v1660495468/scwtx4wozwot0bmyhsyc.png)
 
-## The Frontend Code
-
+## Importing Our Library
 
 In the `example/src/App.js` file, our library is imported together with the CSS file containing all of our stylings.
 
@@ -168,11 +167,11 @@ Thats it!
 npm run deploy
 ```
 
-This generates a build version of our `example/` react app in which we imported and displayed our components.
+This generates a build version of our `example/` React app in which we imported and displayed our components. It will be pushed to our GitHub repo, and a GitHub page will be created.
 
 ## Final words
 
-We've created our very own react component library that can be imported and used in any react project.
+That’s it! We've created our very own react component library that can be imported and used in any react project.
 
 Milky UI is an open source react UI component project I'm working on. I created the project using the same method. The code is available on [GitHub](https://github.com/langford-dev/milky-ui/). It is also available on [npm](https://www.npmjs.com/package/milky-ui)
 
