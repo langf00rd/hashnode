@@ -13,7 +13,7 @@ With that said, let's get coding!
 Start by creating these three files; `index.html`, `styles.css`, and `script.js`.
 
 ### The HTML Structure
-Start by creating the standard HTML boilerplate code.
+Create the standard HTML boilerplate code.
 
 ```
 <!DOCTYPE html>
@@ -135,7 +135,7 @@ The `::after` pseudo-class selects content that comes after a selected element�
 
 We set the `content` property in the code above to an emoji (🤩). This emoji will be our default cursor icon. The size is then increased to `40px` to make it a little bigger.
 
-We change the default emoji every time the mouse is clicked to (😜). The class `pointer-clicked` class is created to accomplish this. This class will assign this class to the pointer in the JavaScript.
+We change the default emoji every time the mouse is clicked to (😜). The class `pointer-clicked` is created to accomplish this. This class will be assigned to the pointer in the JavaScript.
 
 ```
 .pointer-clicked::after {
