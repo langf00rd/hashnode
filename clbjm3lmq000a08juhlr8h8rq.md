@@ -1,4 +1,4 @@
-# How to become a web developer
+# How to become a web developer 👨‍💻
 
 Are you interested in becoming a web developer? If so, you're in luck – web development is a growing field with plenty of opportunities for those willing to learn and work hard.
 
